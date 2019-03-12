@@ -36,6 +36,16 @@ Make sure you have installed Python 3 on your device
   |--- venv/
   |--- run.py
 ```
+### Project Description
+
+1. Constant directory, used to constant string as Relevant or Irrelevant string, etc.
+2. Controller directory, used to handling request from http request both web or API Request
+3. Db directory, used to save datasets from upload data if not exists you should create before run this project
+4. Module directory, used to functionality or logic process in this research then called from controller
+5. Static directory, used to serve css or javascript files
+6. Templates directpry, used for html file when called from controller
+7. Docs directory, used to save documentation of this research
+8. Venv directory, used for virtual environment on this app with python3
 
 ### Step to create flask rest api
 
