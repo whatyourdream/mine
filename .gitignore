@@ -4,5 +4,6 @@
 __pycache__/
 venv/
 .idea
+app/db/
 migrations/
 .ipynb_checkpoints/
