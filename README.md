@@ -1,2 +1,2 @@
-# mine
-this is about my skripsweet
+# Luthvi Riskawati's Research
+Research documentation
