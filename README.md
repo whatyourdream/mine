@@ -69,3 +69,5 @@ pip install -r requirements.txt
 ```
 python run.py
 ```
+![Sample 1](https://github.com/whatyourdream/mine/blob/master/docs/1.PNG)
+![Sample 2](https://github.com/whatyourdream/mine/blob/master/docs/2.PNG)
