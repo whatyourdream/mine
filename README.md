@@ -81,13 +81,13 @@ python run.py
 1. On postman, change request to POST then fill in url to ```http://localhost:8000/api/get-result`
 2. Choose `body` menu to create body request, then choose `raw` and `application/json` type
 3. Create body request, then click `Send` button
-```JSON
+```
 {
 	"query": "daging ayam makaroni tahu"
 }
 ```
 4. You should have response like below
-```JSON
+```
 {
     "columns": [
         "Bahan",
