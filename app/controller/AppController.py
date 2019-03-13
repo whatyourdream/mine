@@ -1,4 +1,4 @@
-from flask import request, render_template
+from flask import request, render_template, jsonify
 from app import app
 from app.module import AppModule
 import pandas as pd
@@ -13,9 +13,11 @@ def index():
     else:
         return render_template("index.html")
 
-@app.route('/api/get-result', methods=['POST'])
+
+@app.route('/api/get-result', methods=['GET'])
 def getResult():
-    q = None if request.json['query'] is "" else request.json['query']
+    q = None if request.args['q'] is "" else request.args['q']
+    response = []
     dataset = AppModule.loadDataset()
     datapreprocess = AppModule.loadDataPreprocessing()
     scores = AppModule.search(q, datapreprocess)
@@ -23,4 +25,11 @@ def getResult():
     df['Score'] = scores
     df['Information'] = AppModule.RelevantChecker(df['Score'])
     result = df.sort_values(by=['Score'], ascending=[False])
-    return result.to_json(orient='split', index=False)
+    for information, ingredients, score in result.values:
+        resp = {
+            "information": information,
+            "ingredients": ingredients,
+            "score": score
+        }
+        response.append(resp)
+    return jsonify(response)
