@@ -4,6 +4,7 @@
 __pycache__/
 venv/
 .idea
-app/db/
+app/db/dataset-pre.xlsx
+app/db/datasets.xlsx
 migrations/
 .ipynb_checkpoints/
