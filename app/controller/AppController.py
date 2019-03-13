@@ -25,7 +25,7 @@ def getResult():
     df['Score'] = scores
     df['Information'] = AppModule.RelevantChecker(df['Score'])
     result = df.sort_values(by=['Score'], ascending=[False])
-    for information, ingredients, score in result.values:
+    for ingredients, score, information in result.values:
         resp = {
             "information": information,
             "ingredients": ingredients,
