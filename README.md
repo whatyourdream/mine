@@ -12,7 +12,7 @@ Make sure you have installed Python 3 on your device
 
 ### Project structure
 ```
-* flask-rest-api/
+* project-structure/
   |--- app/
   |    |--- constant/
   |    |    |--- __init__.py
@@ -55,13 +55,13 @@ A step by step series of examples that tell you how to get a development env run
 ```
 pip install virtualenv
 ```
-2. Create virtual environment and activate inside your flask-rest-api directory according the above structure
+2. Create virtual environment and activate inside your project directory according the above structure
 ```
 virtualenv venv
 > On windows -> venv\Scripts\activate
 > On linux -> . env/bin/activate
 ```
-3. Install some third party librares on your virtual environment with pip
+3. Install some third party libraries on your virtual environment with pip
 ```
 pip install -r requirements.txt
 ```
