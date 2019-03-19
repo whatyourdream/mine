@@ -1,0 +1,44 @@
+<html>
+<head>
+    {% include "head.html" %}
+</head>
+ <body class="h-100">
+    <div class="container-fluid">
+      <div class="row">
+        <!-- Main Sidebar -->
+        {% include "sidebar.html" %}
+        <!-- End Main Sidebar -->
+        <main class="main-content col-lg-10 col-md-9 col-sm-12 p-0 offset-lg-2 offset-md-3">
+          <!-- / .main-navbar -->
+          <div class="main-content-container container-fluid px-4">
+            <!-- Page Header -->
+            <div class="page-header row no-gutters py-4">
+              <div class="col-11 text-center text-sm-left mb-0">
+                <h3 class="page-title">Pencarian Menu MPASI dengan Metode Dice Coefficient</h3>
+              </div>
+            </div>
+            <!-- End Page Header -->
+            <!-- End Small Stats Blocks -->
+        <h4>Upload Your Datasets</h4>
+    <form class="form-inline center-block well" action="/" method="POST" enctype="multipart/form-data">
+        <div class="input-group">
+            <label id="browsebutton" class="btn btn-default input-group-addon" for="my-file-selector" style="background-color:white">
+                <input id="my-file-selector" name="file" type="file" style="display:none;">
+                Browse...
+            </label>
+            <input id="label" type="text" class="form-control" readonly="">
+        </div>
+      <button type="submit" class="btn btn-primary">Upload</button>
+      <span class="help-block">
+    <small id="fileHelp" class="form-text text-muted">Only <strong>.xlsx</strong> file is allowed.</small>
+    </span>
+    </form>
+        {{ done|safe }}
+    </div>
+    <script type="text/javascript" src="static/js/uploader.js"></script>
+    </div>
+          {% include "footer.html" %}
+        </main>
+    {% include "scripts.html" %} 
+</body>
+</html>

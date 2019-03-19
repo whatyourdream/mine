@@ -26,10 +26,12 @@
                 <!-- Quick Post -->
                 <div class="card card-small h-100">
                   <div class="card-header border-bottom">
-                    <h6 class="m-0">Selamat Datang</h6>
+                    <h6 class="m-0">Dataset <a href="preprocessing" class="btn btn-info" style="float: right;">Preprocessing</a></h6>
                   </div>
-                  <div class="card-body d-flex flex-column">
-                    How to use this prototype :<ol>  <li> Choose <i class="material-icons">create_new_folder</i> Upload Data on the left side</li> <li> Step two</li>    <li> Step three</li>    <li> Step four</li>    <li> Step five</li></ol><p><strong>NB :&nbsp;</strong>To see the result, you can choose <i class="material-icons">list</i> Result or <i class="material-icons">bar_chart</i> Charts on the left side</p>
+                  <div class="card-body d-flex flex-column" style="overflow: auto; height: 400px;">
+                    {% for table in tables %}
+                      {{ table | safe }}
+                    {% endfor %}
                   </div>
                 </div>
                 <!-- End Quick Post -->

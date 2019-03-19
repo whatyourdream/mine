@@ -5,13 +5,17 @@ import pandas as pd
 
 
 @app.route('/', methods=['GET', 'POST'])
-def index():
+def home():
+    return render_template("index.html")
+
+@app.route('/upload', methods=['GET', 'POST'])
+def upload():
     if request.method == 'POST':
         AppModule.saveDataset(request.files['file'])
         doneMessage = '<div class="alert alert-success"><strong>Success!</strong> Datasets is updated.</div>'
-        return render_template('index.html', done=doneMessage)
+        return render_template('upload.html', done=doneMessage)
     else:
-        return render_template("index.html")
+        return render_template("upload.html")
 
 
 @app.route('/api/get-result', methods=['GET'])
