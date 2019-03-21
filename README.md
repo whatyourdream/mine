@@ -14,15 +14,15 @@ Make sure you have installed Python 3 on your device
 ```
 * project-structure/
   |--- app/
-  |    |--- constant/
-  |    |    |--- __init__.py
-  |    |    |--- StringConstant.py
   |    |--- controller/
   |    |    |--- __init__.py
   |    |    |--- AppController.py
   |    |--- db/
-  |    |    |--- dataset-pre.xlsx
+  |    |    |--- database.db
   |    |    |--- datasets.xlsx
+  |    |--- model/
+  |    |    |--- __init__.py
+  |    |    |--- AppModel.py
   |    |--- module/
   |    |    |--- __init__.py
   |    |    |--- AppModule.py
@@ -32,7 +32,6 @@ Make sure you have installed Python 3 on your device
   |    |--- templates/
   |    |    |--- index.html
   |    |--- __init__.py
-  |--- docs/
   |--- venv/
   |--- run.py
 ```
