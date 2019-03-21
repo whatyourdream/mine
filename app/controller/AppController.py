@@ -45,7 +45,10 @@ def getResult():
             dataset = AppModule.loadDataset()
             datapreprocess = AppModule.loadDataPreprocessing()
             scores = AppModule.search(q, datapreprocess)
-            df = pd.DataFrame(dataset['Bahan'])
+            df = pd.DataFrame()
+            df['Nama Resep'] = dataset['Nama']
+            df['Bahan'] = dataset['Bahan']
+            df['Usia'] = dataset['Usia']
             df['Score'] = scores
             df['Information'] = AppModule.RelevantChecker(df['Score'])
             result = df.sort_values(by=['Score'], ascending=[False])

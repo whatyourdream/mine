@@ -23,13 +23,7 @@ def saveDataset(file):
 
 
 def loadDataset():
-    data = pd.read_excel('app/db/datasets.xlsx')
-    document = data.Bahan.tolist()
-    document = [temp.replace(u"\xa0", u"") for temp in document]
-    document = [temp.replace(u"\n", u", ") for temp in document]
-    document = [str(temp) for temp in document]
-    dfDocument = pd.DataFrame({'Bahan':document})
-    return dfDocument
+    return pd.read_excel('app/db/datasets.xlsx')
 
 
 def loadDataPreprocessing():
