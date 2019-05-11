@@ -85,13 +85,3 @@ def search(query, datanya):
     #         print score
     return score
 
-
-def RelevantChecker(scores):
-    information = []
-    for score in scores:
-        if score >= 0.5:
-            result = Information.RELEVANT
-        else:
-            result = Information.IRRELEVANT
-        information.append(result)
-    return information
